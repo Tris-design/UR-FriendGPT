@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title>Калькулус Тооцоологч</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #0a2a5e;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .container {
+            background: #10356b;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            width: 800px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        input, button, select {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 18px;
+            width: 100%;
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .nav {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px;
+            background: #162e52;
+            border-radius: 5px;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        .formula-container {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Буцах</a>
+    </div>
+
+    <!-- Image at the top -->
+    <div class="image-container">
+        <img src="calculus.png" alt="Калькулус жишээ зураг">
+    </div>
+
+    <div class="container">
+        <div class="title">Калькулус Тооцоологч</div>
+        <p>Функц оруулж, тооцоолох үйлдлийг сонгоно уу.</p>
+        <input type="text" id="function" placeholder="Функц оруулна уу (жишээ: x^2 + 3x)">
+        <select id="operation">
+            <option value="derivative">Дериватив</option>
+            <option value="integral">Интеграл</option>
+        </select>
+        <button onclick="calculate()">Тооцоолох</button>
+        <div class="output" id="result"></div>
+    </div>
+
+    <!-- Formulas moved below -->
+    <div class="formula-container">
+        <h2>Калькулус Формулууд</h2>
+        <p>
+            Дериватив: \(\frac{d}{dx} f(x) = f'(x)\)  <br>
+            Интеграл: \(\int f(x)dx = F(x) + C\)
+        </p>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.0/math.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
